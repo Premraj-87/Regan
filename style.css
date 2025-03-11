@@ -1,0 +1,696 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  height: 7rem;
+}
+.navbar .logo {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.navbar .menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.2rem;
+  color: white;
+  background: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.navbar .nav-links {
+  list-style: none;
+  background: rgb(235, 235, 235);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.5rem 0.5rem;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+  visibility: hidden;
+}
+.navbar .nav-links.active {
+  max-height: 30rem;
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7rem;
+  font-weight: 500;
+  display: block;
+}
+
+.Hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.Hero .hero-1 {
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+.Hero .hero-1 .hero-h1 p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: black;
+}
+.Hero .hero-1 .hero-img {
+  width: 100%;
+}
+.Hero .hero-1 .hero-img img {
+  width: 100%;
+  height: 100%;
+}
+.Hero .hero-2 h1 {
+  opacity: 0;
+}
+.Hero .hero-2 p {
+  font-size: 1.1rem;
+  color: black;
+  line-height: 1.5;
+}
+
+.Work {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+.Work .work-contt {
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+.Work .work-contt .inside-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+.Work .work-contt .inside-cont .circlecon {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+}
+.Work .work-contt .inside-cont .circlecon .circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: black;
+}
+.Work .work-contt .inside-cont .circlecon h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: black;
+}
+.Work .work-contt .inside-cont hr {
+  width: 100%;
+  height: 0.15rem;
+  background: black;
+}
+.Work .work-contt .work-para {
+  display: flex;
+  width: 100%;
+  gap: 2.5rem;
+  line-height: 1.5;
+}
+.Work .work-contt .work-head h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: black;
+}
+.Work .work-contt .work-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  width: 100%;
+}
+.Work .work-contt .work-container .work-cont {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1rem;
+}
+.Work .work-contt .work-container .work-cont h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+}
+.Work .work-contt .work-container .work-cont img {
+  width: 100%;
+  height: 100%;
+}
+
+.Skill {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+.Skill .skill-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+.Skill .skill-cont .skillcon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.Skill .skill-cont .skillcon .skillcircle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: black;
+}
+.Skill .skill-cont hr {
+  width: 100%;
+  height: 0.15rem;
+  background: black;
+}
+.Skill .skill-para h1 {
+  opacity: 0;
+}
+.Skill .skill-head h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: black;
+}
+.Skill .skill-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.Skill .skill-container .skill-img {
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+}
+.Skill .skill-container .skill-img img {
+  width: 100%;
+  height: 100%;
+}
+.Skill .skill-container .skill-contt {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+.Skill .skill-container .skill-contt .skill-lan {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.2rem;
+}
+.Skill .skill-container .skill-contt .skill-lan h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: black;
+}
+.Skill .skill-container .skill-contt .skill-lan .lanskill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  padding: 0rem 1rem;
+}
+.Skill .skill-container .skill-contt .skill-lan .lanskill .lan {
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  border: 0.1rem solid black;
+  padding: 0.5rem;
+  border-radius: 4rem;
+}
+
+.About {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+.About .about-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.About .about-cont .aboutcon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.About .about-cont .aboutcon .aboutcircle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: black;
+}
+.About .about-cont .aboutcon h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+}
+.About .about-cont hr {
+  width: 100%;
+  height: 0.15rem;
+  background: black;
+}
+.About .about-para h1 {
+  opacity: 0;
+}
+.About .about-head h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: black;
+}
+.About .about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+.About .about-container .about-cont-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.About .about-container .about-cont-1 .about-cont-blank {
+  background: white;
+}
+.About .about-container .about-cont-1 .about-img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.About .about-container .about-cont-1 .about-img h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: black;
+}
+.About .about-container .about-cont-1 .about-img img {
+  width: 100%;
+}
+.About .about-container .about-cont-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.About .about-container .about-cont-2 .about-con-2img {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2.5rem;
+  background: rgb(228, 225, 226);
+}
+.About .about-container .about-cont-2 .about-con-2img img {
+  width: 50%;
+  height: 100%;
+}
+.About .about-container .about-cont-2 p {
+  font-size: 1.1rem;
+  color: black;
+  line-height: 1.5;
+}
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+.Contact .contact-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.Contact .contact-cont .contactcon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+.Contact .contact-cont .contactcon .contactcircle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: black;
+}
+.Contact .contact-cont .contactcon h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+}
+.Contact .contact-cont hr {
+  width: 100%;
+  height: 0.15rem;
+  background: black;
+}
+.Contact .contact-para h1 {
+  opacity: 0;
+}
+.Contact .contact-head h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: black;
+}
+.Contact .contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+.Contact .contact-container .contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.Contact .contact-container .contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+.Contact .contact-container .contact-form .form-group label {
+  font-size: 1.2rem;
+  color: black;
+  opacity: 0.7;
+}
+.Contact .contact-container .contact-form .form-group input {
+  width: 50%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 0.01rem solid black;
+}
+.Contact .contact-container .contact-form .form-group textarea {
+  width: 50%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 0.1rem solid black;
+}
+.Contact .contact-container .contact-form .form-group button {
+  width: 50%;
+  padding: 0.5rem;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.Contact .contact-bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.Contact .contact-bottom .contact-b-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.Contact .contact-bottom .contact-b-1 h1 {
+  font-size: 1em;
+  font-weight: 400;
+  color: black;
+}
+.Contact .contact-bottom .contact-b-1 p {
+  font-size: 0.8rem;
+  color: black;
+  line-height: 1.5;
+}
+.Contact .contact-bottom .contact-b-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.Contact .contact-bottom .contact-b-2 h1 {
+  font-size: 1em;
+  font-weight: 400;
+  color: black;
+}
+.Contact .contact-bottom .contact-b-2 .socilals {
+  display: flex;
+  gap: 1rem;
+}
+.Contact .contact-bottom .contact-b-2 .socilals a {
+  font-size: 0.9rem;
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding: 2rem;
+  }
+  .navbar .logo {
+    font-size: 5rem;
+  }
+  .navbar .menu-toggle {
+    display: none;
+  }
+  .navbar .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    max-height: none;
+    justify-content: flex-end;
+    opacity: 1;
+    visibility: visible;
+    gap: 2rem;
+    padding: 0;
+    transform: none;
+  }
+  .navbar .nav-links .quote {
+    display: none;
+  }
+  .navbar .nav-links li a {
+    font-size: 1rem;
+  }
+  .Hero {
+    width: 100%;
+  }
+  .Hero .hero-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding: 2rem;
+  }
+  .Hero .hero-1 .hero-img {
+    width: 90%;
+    position: relative;
+    margin-left: 7rem;
+  }
+  .Hero .hero-1 .hero-img img {
+    width: 65%;
+    height: 100%;
+  }
+  .Hero .hero-1 .hero-h1 {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Hero .hero-1 .hero-h1 p {
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+  }
+  .Hero .hero-2 {
+    width: 100%;
+    display: flex;
+  }
+  .Hero .hero-2 h1 {
+    width: 50%;
+    opacity: 0;
+  }
+  .Hero .hero-2 p {
+    width: 50%;
+  }
+  .Work .work-contt .work-head h1 {
+    font-size: 2.5rem;
+  }
+  .Work .work-contt .work-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .Work .work-contt .work-container .work-cont {
+    width: 100%;
+  }
+  .Work .work-contt .work-container .work-cont h1 {
+    font-size: 1.5rem;
+  }
+  .Skill .skill-para {
+    display: flex;
+    width: 100%;
+  }
+  .Skill .skill-para h1 {
+    width: 50%;
+    opacity: 0;
+  }
+  .Skill .skill-para p {
+    width: 50%;
+  }
+  .Skill .skill-head h1 {
+    font-size: 2.5rem;
+  }
+  .Skill .skill-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .Skill .skill-container .skill-img {
+    width: 50%;
+    padding: 3rem;
+  }
+  .Skill .skill-container .skill-img img {
+    width: 100%;
+    height: 100%;
+  }
+  .Skill .skill-container .skill-contt {
+    width: 50%;
+  }
+  .Skill .skill-container .skill-contt .skill-lan h1 {
+    font-size: 2rem;
+  }
+  .Skill .skill-container .skill-contt .skill-lan .lanskill .lan {
+    font-size: 1.5rem;
+  }
+  .About .about-para {
+    display: flex;
+    width: 100%;
+  }
+  .About .about-para h1 {
+    width: 50%;
+    opacity: 0;
+  }
+  .About .about-para p {
+    width: 50%;
+  }
+  .About .about-head h1 {
+    font-size: 2.5rem;
+  }
+  .About .about-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .About .about-container .about-cont-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .About .about-container .about-cont-1 .about-cont-blank {
+    background: white;
+    opacity: 0;
+  }
+  .About .about-container .about-cont-1 .about-img {
+    width: 80%;
+  }
+  .About .about-container .about-cont-1 .about-img img {
+    width: 100%;
+  }
+  .About .about-container .about-cont-2 {
+    width: 50%;
+  }
+  .About .about-container .about-cont-2 .about-con-2img img {
+    width: 100%;
+  }
+  .Contact .contact-para {
+    display: flex;
+    width: 100%;
+  }
+  .Contact .contact-para h1 {
+    width: 50%;
+    opacity: 0;
+  }
+  .Contact .contact-para p {
+    width: 50%;
+  }
+  .Contact .contact-head {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
+  }
+  .Contact .contact-head h1 {
+    font-size: 2.5rem;
+  }
+  .Contact .contact-container {
+    width: 50%;
+  }
+  .Contact .contact-container .contact-form .form-group {
+    width: 100%;
+    margin-left: 3rem;
+  }
+  .Contact .contact-container .contact-form .form-group label {
+    font-size: 1.3rem;
+  }
+  .Contact .contact-container .contact-form .form-group input {
+    width: 80%;
+    padding: 0.5rem;
+  }
+  .Contact .contact-container .contact-form .form-group textarea {
+    width: 80%;
+    padding: 0.5rem;
+  }
+  .Contact .contact-container .contact-form .form-group button {
+    width: 80%;
+    padding: 0.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
